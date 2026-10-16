@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Web3 Developer</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        #footer-typing {
+            color: #8ed9a4;
+        }
+
+        .cursor {
+            display: inline-block;
+            color: #8ed9a4;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid #8ed9a4;
+        }
+
+
+        body {
+            background: #101211;
+            color: #f2f4f2;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 8%;
+            border-bottom: 1px solid #303a32;
+        }
+
+        nav a,
+        .button {
+            color: #b9e8c6;
+            text-decoration: none;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 100px auto;
+            padding: 0 25px;
+        }
+
+        .tag {
+            color: #8ed9a4;
+            letter-spacing: 3px;
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: clamp(38px, 7vw, 68px);
+            line-height: 1.1;
+            margin: 24px 0;
+        }
+
+        p {
+            color: #b6c0b8;
+            max-width: 600px;
+            margin-bottom: 24px;
+        }
+
+        .button {
+            display: inline-block;
+            border: 1px solid #59645b;
+            padding: 10px 18px;
+            border-radius: 6px;
+            margin: 5px 8px 5px 0;
+        }
+
+        section {
+            margin-top: 75px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .project {
+            border: 1px solid #303a32;
+            padding: 22px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            padding: 30px;
+            text-align: center;
+            color: #9aa79d;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <nav>
+        <div class="brand">
+            <img src="KIROKAZE.gif" alt="Profile photo">
+            <strong>TS.</strong>
+        </div>
+
+        <a href="#contact">CONTACT ↗</a>
+    </nav>
+
+
+    <main>
+        <div class="tag">ASPIRING WEB3 DEVELOPER</div>
+
+        <h1>Building at the intersection
+            of code and decentralization.</h1>
+
+        <p>
+            I'm a student exploring Solidity, smart contracts
+            and Web3. I learn by building projects and
+            experimenting with new ideas.
+        </p>
+
+        <a class="button" href="#projects">Explore Projects ↘</a>
+        <a class="button" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+
+
+        <section id="about">
+            <div class="tag">01 / ABOUT ME</div>
+            <h2>Curious mind. Builder at heart.</h2>
+
+            <p>
+                I'm a college student passionate about technology,
+                blockchain, and decentralized applications.
+                I'm currently exploring the Web3 ecosystem and
+                learning Solidity by building smart contracts
+                such as SimpleStorage and FundMe.
+            </p>
+
+            <p>
+                I believe the best way to learn is by building,
+                experimenting, and solving real-world problems.
+                I'm excited to participate in hackathons like
+                ETHGlobal, collaborate with other developers,
+                and turn ideas into meaningful projects.
+            </p>
+        </section>
+
+
+        <section id="projects">
+            <h2>Selected Projects</h2>
+
+            <div class="project">
+                <h3>SimpleStorage</h3>
+                <p>A beginner Solidity smart contract for storing
+                    and retrieving a number on the blockchain.</p>
+                <span class="tag">SOLIDITY · ETHEREUM</span>
+            </div>
+
+            <div class="project">
+                <h3>FundMe</h3>
+                <p>A smart contract project exploring payable
+                    functions and ETH/USD price conversion.</p>
+                <span class="tag">SOLIDITY · CHAINLINK</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Currently Learning</h2>
+            <p>Solidity · Ethereum · Smart Contracts · Web3</p>
+        </section>
+
+
+        <section id="contact">
+            <h2>Let's Connect</h2>
+            <p>
+                Interested in building, learning and collaborating
+                on Web3 projects. Feel free to reach out.
+            </p>
+
+            <a class="button" href="mailto:ts634231@gmail.com">
+                Email ↗
+            </a>
+
+            <a class="button" href="https://www.instagram.com/tsarhnu/" target="_blank" rel="noopener noreferrer">
+                Instagram ↗
+            </a>
+
+            <a class="button" href="https://x.com/TARUNSAHU1762" target="_blank" rel="noopener noreferrer">
+                X (Twitter) ↗
+            </a>
+
+            <a class="button" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                GitHub ↗
+            </a>
+        </section>
+
+    </main>
+
+
+
+    <footer>
+        Built while <span id="footer-typing"></span><span class="cursor">|</span> Web3.
+    </footer>
+
+
+
+
+    <script>
+        const word = "learning";
+        const typing = document.getElementById("footer-typing");
+
+        let i = 0;
+        let deleting = false;
+
+        function typeEffect() {
+            typing.textContent = word.substring(0, i);
+
+            if (!deleting && i < word.length) {
+                i++;
+            } else if (deleting && i > 0) {
+                i--;
+            } else {
+                deleting = !deleting;
+                setTimeout(typeEffect, 700);
+                return;
+            }
+
+            setTimeout(typeEffect, deleting ? 100 : 150);
+        }
+
+        typeEffect();
+    </script>
+
+
+
+</body>
+
+</html>
